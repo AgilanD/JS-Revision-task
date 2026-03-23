@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <p>hiiii</p>
+    <img class="lazy" src="https://mountainfieldguide.com/wp-content/uploads/2018/03/Sunrise-Looking-at-Three-Brothers-Yosemite.jpg" alt="Description of image">
+
+    <script>
+        document.addEventListener("scroll", function() {
+  const lazyImages = document.querySelectorAll("img.lazy");
+//   console.log("hiii");
+
+  const lazyLoad = (image) => {
+    image.src = image.dataset.src;
+    image.classList.remove("lazy");
+  };
+
+  const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        lazyLoad(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  lazyImages.forEach((image) => {
+    lazyImageObserver.observe(image);
+  });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+*{
+    border:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    height:98dvh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+#Outer{
+    border:1px solid black;
+    border-radius: 2rem;
+    display:flex;
+    height:auto;
+    padding:30px;
+    gap:10px;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: aquamarine;
+    box-shadow: 0px 2px 3px 0px ;
+}
+
+input{
+    border:1px solid none;
+    border-radius:3rem; 
+    padding:10px 5px;
+}
+
+button{
+    border:1px solid none ;
+    padding:10px 5px;
+    border-radius: 2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    /* font-style:unset; */
+    font-size: 1em;
+    box-shadow: 0px 1px 2px 0px ;
+}
+h2{
+    color:white;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+#i{
+    color:rgb(10, 10, 10);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#st{
+    text-align: center;
+}
+
+#ErrorDiv{
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}
+
+.Pagination{
+    display:flex;
+    flex-direction: row;
+    gap:3px;
+    justify-content: space-evenly;
+}
+
+.Pagination div{
+
+   border:.5px solid black;
+   padding:10px;
+   background-color:aqua;
+  
+
+}
+
+#First,#Second,#Third{
+    display:none;
+}

@@ -1,0 +1,13 @@
+
+.modal {
+  background-color: rgb(102, 223, 91);
+  display: none; 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}

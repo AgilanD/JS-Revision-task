@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <input id="otp" type="text" placeholder="Enter OTP" maxlength="6" />
+
+<script>
+async function pasteOTPFromClipboard() {
+    try {
+        const text = await navigator.clipboard.readText();
+        // console.log(text);
+        // const regex = /^[a-z ]+$/;
+        if (text==="123456") { 
+            document.getElementById('otp').value = text;
+            console.log("OTP pasted from clipboard:", text);
+        }
+         else {
+            console.log("Clipboard does not contain123456 a valid OTP.");
+        }
+    }
+     catch (err) {
+        console.log("Failed to read clipboard:");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", pasteOTPFromClipboard);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Task31.css">
+</head>
+<body>
+    <div>
+        <h1>Basic Drag & Drop</h1>
+    </div>
+    <div id="inner">
+
+        <div>
+            <h2>Available Items </h2>
+            <p id="img1" draggable="true" ondragstart="dragstartHandler(event)">Item1</p>
+            <p id="img2" draggable="true" ondragstart="dragstartHandler(event)">Item2</p>
+            <p id="img3" draggable="true" ondragstart="dragstartHandler(event)">Item3</p>
+        </div> 
+
+        <div  id="div1"  ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+            <h2>Selected Items</h2>
+   
+        </div>
+
+    </div>
+    <script src="./Task31.js"></script>
+</body>
+</html>

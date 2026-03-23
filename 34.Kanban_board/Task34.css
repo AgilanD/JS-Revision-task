@@ -1,0 +1,37 @@
+*{
+    border:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    height:98dvh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #6a11cb, #2575fc);
+}
+
+#Outer{
+    border:1px solid black;
+    border-radius: 2rem;
+    display:flex;
+    height:auto;
+    padding:30px;
+    gap:10px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(241, 185, 133);
+    box-shadow: 0px 2px 3px 0px ;
+}
+
+h2{
+    color:white;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+P{
+    text-align: center;
+}

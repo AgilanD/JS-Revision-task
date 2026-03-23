@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:200dvh;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Debouncing and Throttle Scroll</h1>
+    </div>
+    <img src="https://mountainfieldguide.com/wp-content/uploads/2018/03/Sunrise-Looking-at-Three-Brothers-Yosemite.jpg" alt="Dummy">
+
+
+    <script>
+       function debouncing(callback,delay){
+        console.log(window.scrollY);
+       let Timer=0;
+       return function (...args){
+         clearTimeout(Timer);
+         Timer=setTimeout(()=>{
+                callback.apply(this,args);
+         },delay);
+       }
+        }
+
+        function search(number){
+                console.log(number);
+        }
+
+        let demo=debouncing(search,500);
+
+        setInterval(()=>{
+            demo(window.scrollY);
+        },2000)
+
+
+         function throttle(fn, limit) {
+                let waiting = false;
+            return function (...args) {
+                if (!waiting) {
+                    fn.apply(this, args);
+                    waiting = true;
+                    setTimeout(() => {
+                      waiting = false;
+                    }, limit);
+                }
+            };
+        }
+        function trackScroll() {
+            console.log(window.scrollY);
+        }
+        window.addEventListener("scroll", throttle(trackScroll, 1000));
+    </script>
+
+</body>
+
+</html>

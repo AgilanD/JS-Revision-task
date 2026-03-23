@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: Verdana, sans-serif; 
+  height:98dvh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div{
+  text-align: center;
+}
+
+#inner{
+    width:100%;
+    text-align: center;
+    background-color: bisque;
+    border:1px solid black;
+    display:flex;
+    height:auto;
+    flex-direction: column;
+    padding:30px;
+    gap:10px;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow:0px 2px 3px 0px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #0e0d0d;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+</style>
+</head>
+<body>
+
+  <div>
+    <p>Image Slider</p>
+  </div>
+
+  <div id="inner">
+
+        <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/036/226/116/small_2x/ai-generated-nature-landscapes-background-free-photo.jpg" style="width:100%">
+      <div class="text">Image 1</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://th.bing.com/th/id/OIP.JPogPMSOOv8g9WJdtLUluAHaEe?w=187&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" style="width:100%">
+      <div class="text">Image 2</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?cs=srgb&dl=pexels-%C3%A1kos-szab%C3%B3-440731.jpg&fm=jpg" style="width:100%">
+      <div class="text">Image 3</div>
+    </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+  </div>
+  
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Task34.css">
+</head>
+<body>
+  <div>
+     <h2> Kanban Board </h2>
+  </div>
+    <div id="Outer">
+    
+     <div>
+        <p>TODO</p>
+        <P>==========</P>
+        <P id="img1" draggable="true" ondragstart="dragstartHandler(event)">FRONTEND</P>
+        <P id="img2" draggable="true" ondragstart="dragstartHandler(event)">REST API</P>
+        <P id="img3" draggable="true" ondragstart="dragstartHandler(event)">BACKEND</P>
+        <P id="img4" draggable="true" ondragstart="dragstartHandler(event)">DATABASE</P>
+        <P id="img5" draggable="true" ondragstart="dragstartHandler(event)">DB CONNECTION</P>
+    </div>
+    
+    <div id="div1"  ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+        <p>IN PROGESS</p>
+        <P>==========</P>
+    </div>
+    
+    <div id="div1"  ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+        <p>DONE</p>
+        <P>==========</P>
+    </div>
+
+    </div>
+  <script src="./Task34.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idle User Detection</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+    #status {
+        font-size: 1.5em;
+        color: green;
+    }
+</style>
+</head>
+<body>
+
+<h1>Idle User Detection Demo</h1>
+<p id="status">User is active</p>
+
+<script>
+(function() {
+    let idleTime = 0; 
+    const idleLimit = 5;
+    const statusEl = document.getElementById('status');
+    let idleTimer;
+
+    function resetIdleTimer() {
+        idleTime = 0;
+        statusEl.textContent = "User is active";
+    }
+    function startIdleCounter() {
+        idleTimer = setInterval(() => {
+            idleTime++;
+            if (idleTime >= idleLimit) {
+                statusEl.textContent = "User is idle";
+            }
+        }, 1000);
+    }
+
+    ['mousemove', 'keydown', 'scroll', 'click', 'touchstart'].forEach(evt => {
+        window.addEventListener(evt, resetIdleTimer, false);
+    });
+
+    resetIdleTimer();
+    startIdleCounter();
+})();
+</script>
+
+</body>
+</html>
